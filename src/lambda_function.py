@@ -47,7 +47,7 @@ def lambda_handler(event, context):
     # TODO implement
     return {
         'statusCode': 200,
-        'body': json.dumps('Hello from Futu Test! v4')
+        'body': json.dumps('Hello from Futu Test! v5')
     }
 
     if(success):
