@@ -20,7 +20,7 @@ jobs:
                 touch conn.txt
                 echo $CONN >> conn.txt
             - name: Create Zip file for Lambda function
-              run: zip -r code.zip .
+              run: cd src && zip -r code.zip .
             - name: AWS CLI v2
               uses: imehedi/actions-awscli-v2@latest
               with:
