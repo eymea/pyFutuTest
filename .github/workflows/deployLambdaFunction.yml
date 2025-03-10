@@ -19,7 +19,7 @@ jobs:
                 CONN: ${{ secrets.CONN }}
               run: |
                 cd src 
-                echo $CONN > conn.txt
+                echo "$CONN" > conn.txt
             - name: Create Zip file for Lambda function
               run: cd src && zip -r code.zip .
             - name: AWS CLI v2
