@@ -7,5 +7,6 @@ Files: conn.txt
 Env:
   FODAddress:
   FODPort:
+  CONN:
 
 

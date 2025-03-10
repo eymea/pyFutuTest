@@ -14,8 +14,10 @@ jobs:
             - uses: actions/checkout@v2
             - name: install zip tool
               uses: montudor/action-zip@v1
+            - name: Generate conn.txt file
+              run: cd src && echo ${{ secrets.CONN }} > conn.txt
             - name: Create Zip file for Lambda function
-              run: cd src && zip -r code.zip .
+              run: zip -r code.zip .
             - name: AWS CLI v2
               uses: imehedi/actions-awscli-v2@latest
               with:
