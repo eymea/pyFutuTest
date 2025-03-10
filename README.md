@@ -6,10 +6,6 @@ Library: python -m pip install futu-api
 
 Files: conn.txt
 
-Env:
-
-  FODAddress:
-  FODPort:
-  CONN:
+Env: FODAddress, FODPort, CONN
 
 
