@@ -18,8 +18,7 @@ jobs:
               run: |
                 cd src 
                 touch conn.txt
-                ls conn.txt
-                echo ${{ secrets.CONN }} >> conn.txt
+                echo $CONN >> conn.txt
             - name: Create Zip file for Lambda function
               run: zip -r code.zip .
             - name: AWS CLI v2
@@ -32,5 +31,6 @@ jobs:
                 AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
                 AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                 AWS_DEFAULT_REGION: "ap-southeast-2"
+                CONN: ${{ secrets.CONN }}
 
 
