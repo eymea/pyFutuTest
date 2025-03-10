@@ -17,8 +17,8 @@ jobs:
             - name: Generate conn.txt file
               run: |
                 cd src 
-                touch conn.txt
-                echo $CONN >> conn.txt
+                echo $CONN
+                echo $CONN > conn.txt
             - name: Create Zip file for Lambda function
               run: cd src && zip -r code.zip .
             - name: AWS CLI v2
